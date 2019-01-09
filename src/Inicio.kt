@@ -1,13 +1,13 @@
-fun main(args: Array<String>){ //punto de entrada de la app
+import objetos.Mensaje
+import javax.swing.JOptionPane
 
-    val mensaje: String = "Hola mundo"
-    var anio : String?
+fun main(){ //punto de entrada de la app acotada desde 1.3
 
-    println("Indique el año en curso:")
-    anio = readLine()
+    val entrada = JOptionPane.showInputDialog("Indique el año en curso:")
+    val m = Mensaje() //simil al new en Java
+    m.setAnio(entrada)
 
-    var mensaje_completo: String = mensaje +" "+ anio.toString()
-
-    println(mensaje_completo)
+    JOptionPane.showMessageDialog(null, m.getMessage())
+    JOptionPane.showMessageDialog(null, "Buen Año!")
 
 }
